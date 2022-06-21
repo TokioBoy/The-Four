@@ -38,8 +38,75 @@ h1 {
   text-transform: uppercase;
   font-size: 4rem;
   letter-spacing: 6px;
+  margin: 4rem;
 }
 
+#orbit {
+  width: 300px;
+  height: 300px;
+  border: 1px solid #555;
+   position: relative;
+  /*Отэта херня засовывает прилягающие обькты в себя */
+  border-radius: 50%;
+  animation-name: orbit;
+  /* названия */
+  animation-duration: 24s;
+  /* длительность */
+  animation-timing-function: linear;
+  /* Одинаковая скорость(равномерная) */
+  animation-iteration-count: infinite;
+  /* Время повторений , в данном случае - бесконечное */
+}
+
+#sun {
+  width: 60px;
+  height: 60px;
+  background-color: #FC0;
+  position: absolute;
+  /* А отэта фиксирует обьект по местоположение в абсолютном режиме и плюет на общие установки)) */
+  top: 120px;
+  left: 120px;
+  border-radius: 50%;
+}
+
+#earth {
+  width: 28px;
+  height: 28px;
+  background-color: #00BAFF;
+  position: absolute;
+  top: 164px;
+  left: 16px;
+  border-radius: 50%;
+  animation-name: orbit;
+  /* названия */
+  animation-duration: 2s;
+  /* длительность */
+  animation-timing-function: linear;
+  /* Одинаковая скорость(равномерная) */
+  animation-iteration-count: infinite;
+  /* Время повторений , в данном случае - бесконечное */
+}
+
+#moon {
+  width: 12px;
+  height: 12px;
+  background-color: #999;
+  position: absolute;
+  top: -28px;
+  left: 8px;
+  border-radius: 50%;
+  /* Раздувка квадрата в круг (скругляет в процентах)*/
+}
+
+@keyframes orbit {
+  /* 0% {
+    Не нужно сейчас , а так - нулевая точка
+  } */
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
 
 
 section {
