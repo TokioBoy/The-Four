@@ -1,16 +1,13 @@
 (() => {
 
     
- const spring = document.querySelector('#spring');
+    const spring = document.querySelector('#spring');
 
- const springArticle = document.querySelector('#spring>artical');
+    const springArticle = document.querySelector('#spring>article');
 
- spring.addEventListener('click', event => {    
-    console.log('spring has been clicked');          
+    spring.addEventListener('click', event => {
         springArticle.classList.toggle('inviewport');
- });
-
-
+    });
 
 
 })();
