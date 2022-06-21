@@ -110,11 +110,15 @@ h1 {
 
 
 section {
-  background-image: url(media/spring.jpg);
   height: 100vh;
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
 }
 
 #spring {
@@ -131,4 +135,66 @@ section {
 
 #winter {
   background-image: url(media/winter.jpg);
+}
+
+footer {
+  padding: 4rem;
+  background-color: #111;
+}
+
+footer img {
+  /* Выделяет только картинки из footer */
+  display: block;
+  width: 4rem;
+  height: 4rem;
+  transition: all 0.3s;
+  /* Эта херня отвечает за превращение из одного вида в другой , по условию */
+}
+
+footer img:hover {
+  transform: scale(1.3);
+}
+/* hover - условие , активирующеюся при наводке мышью
+scale - увелечение в кратности */
+
+footer ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+
+}
+
+footer li {
+  margin: 1rem;
+}
+/* Выделение только листа из footer  */
+
+article {
+  background-color: rgba(0,0,0,0.5);
+  color: #fff;
+  max-width: 800px;
+  padding: 2rem;
+  margin: 1rem;
+  border-radius: 8px;
+  /* округляет */
+  transform: translate(0,10rem);
+  opacity: 0;
+  transition: all 1s;
+}
+
+article.inviewport {
+  transform: translate(0,0);
+  opacity: 1;
+}
+
+h2 {
+  margin-bottom: 1rem;
+  font-size: 3rem;
+  letter-spacing: -1px;
+  color: rgba(255,255,255,0.5);
+  /* Последний параметр - прозрачность */
+}
+
+p {
+  line-height: 1.4;
 }
